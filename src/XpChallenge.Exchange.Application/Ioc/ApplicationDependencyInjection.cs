@@ -16,6 +16,7 @@ namespace XpChallenge.Exchange.Application.Ioc
             services.AddScoped<INotificator, Notificator>();
 
             services.AddScoped<IOperacaoService, OperacaoService>();
+            services.AddScoped<IProdutoFinanceiroService, ProdutoFinanceiroService>();
         }
     }
 }

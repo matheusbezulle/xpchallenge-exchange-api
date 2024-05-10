@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using XpChallenge.Exchange.Api.Requests;
+using XpChallenge.Exchange.Application.Commands.ComprarProdutoFinanceiro;
 using XpChallenge.Exchange.Application.Notifications;
 
 namespace XpChallenge.Exchange.Api.Controllers
@@ -11,10 +13,17 @@ namespace XpChallenge.Exchange.Api.Controllers
     {
         private readonly IMediator _mediator = mediator;
 
-        [HttpPost("[controller]/comprar")]
-        public async Task<IActionResult> Comprar(CancellationToken cancellationToken = default)
+        [HttpPost("[controller]/Comprar")]
+        public async Task<IActionResult> Comprar([FromBody] ComprarProdutoFinanceiroRequest request, CancellationToken cancellationToken = default)
         {
-            //await _mediator.Send(new CriarPortfolioCommand(request.Nome, request.IdPerfil), cancellationToken);
+            await _mediator.Send(new ComprarProdutoFinanceiroCommand(request.IdCliente, request.NomeProdutoFinanceiro, request.Quantidade), cancellationToken);
+            return ProcessarRetorno();
+        }
+
+        [HttpPost("[controller]/Vender")]
+        public async Task<IActionResult> Vender([FromBody] ComprarProdutoFinanceiroRequest request, CancellationToken cancellationToken = default)
+        {
+            await _mediator.Send(new ComprarProdutoFinanceiroCommand(request.IdCliente, request.NomeProdutoFinanceiro, request.Quantidade), cancellationToken);
             return ProcessarRetorno();
         }
     }

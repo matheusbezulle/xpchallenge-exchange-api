@@ -15,8 +15,4 @@
     <ProjectReference Include="..\XpChallenge.Exchange.Application\XpChallenge.Exchange.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Requests\" />
-  </ItemGroup>
-
 </Project>

@@ -12,12 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\XpChallenge.Exchange.Domain\XpChallenge.Exchange.Domain.csproj" />
+    <ProjectReference Include="..\XpChallenge.Exchange.Infra.External\XpChallenge.Exchange.Infra.External.csproj" />
+    <ProjectReference Include="..\XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XpChallenge.Exchange.Domain\XpChallenge.Exchange.Domain.csproj" />
-    <ProjectReference Include="..\XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj" />
+    <Folder Include="Commands\VenderProdutoFinanceiro\" />
   </ItemGroup>
 
 </Project>

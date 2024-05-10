@@ -15,5 +15,10 @@ namespace XpChallenge.Exchange.Infra.Mongo.Repositories
 
             return await _operacaoCollection.Find(filter).ToListAsync(cancellationToken);
         }
+
+        public async Task CriarAsync(Operacao operacao, CancellationToken cancellationToken)
+        {
+            await _operacaoCollection.InsertOneAsync(operacao, cancellationToken: cancellationToken);
+        }
     }
 }

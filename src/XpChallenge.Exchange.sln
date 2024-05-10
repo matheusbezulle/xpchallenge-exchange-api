@@ -19,11 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Exchange.Applic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Exchange.Domain", "XpChallenge.Exchange.Domain\XpChallenge.Exchange.Domain.csproj", "{47D80301-BFBD-462E-975C-C2ED8DDCEA51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpChallenge.Exchange.Infra.External", "XpChallenge.Exchange.Infra.External\XpChallenge.Exchange.Infra.External.csproj", "{84F18555-340F-4EDA-B9C7-4DD163B863F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Exchange.Infra.External", "XpChallenge.Exchange.Infra.External\XpChallenge.Exchange.Infra.External.csproj", "{84F18555-340F-4EDA-B9C7-4DD163B863F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpChallenge.Exchange.Infra.Mongo", "XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj", "{8D0F369D-25C1-4AB9-B26B-27884DC9D094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Exchange.Infra.Mongo", "XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj", "{8D0F369D-25C1-4AB9-B26B-27884DC9D094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpChallenge.Exchange.Tests", "..\tests\XpChallenge.Exchange.Tests\XpChallenge.Exchange.Tests.csproj", "{6E750249-4E42-435D-8CA6-7336AF1F4DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Exchange.Tests", "..\tests\XpChallenge.Exchange.Tests\XpChallenge.Exchange.Tests.csproj", "{6E750249-4E42-435D-8CA6-7336AF1F4DF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
