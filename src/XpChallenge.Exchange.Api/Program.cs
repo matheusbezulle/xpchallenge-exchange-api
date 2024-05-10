@@ -1,34 +1,40 @@
 
+using Microsoft.AspNetCore.Hosting;
+using System.Globalization;
+
 namespace XpChallenge.Exchange.Api
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var culture = new CultureInfo("pt-BR");
+            culture.NumberFormat.NumberDecimalDigits = 2;
+            CultureInfo.CurrentCulture = culture;
 
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            try
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                CreateHostBuilder(args).Build().Run();
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Falha ao iniciar. Erro: {ex.Message}");
+            }
+        }
 
-            app.UseAuthorization();
+        private static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            var builder = Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                })
+            .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
 
-
-            app.MapControllers();
-
-            app.Run();
+            return builder;
         }
     }
 }
