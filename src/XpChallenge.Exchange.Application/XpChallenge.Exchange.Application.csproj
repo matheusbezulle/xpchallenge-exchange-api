@@ -7,14 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Ioc\" />
-    <Folder Include="Services\" />
-    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XpChallenge.Exchange.Domain\XpChallenge.Exchange.Domain.csproj" />
+    <ProjectReference Include="..\XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj" />
   </ItemGroup>
 
 </Project>

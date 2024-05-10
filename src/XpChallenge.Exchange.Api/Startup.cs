@@ -1,5 +1,6 @@
 ﻿using XpChallenge.Exchange.Api.Configurations.Extensions;
 using XpChallenge.Exchange.Api.Managers;
+using XpChallenge.Exchange.Application.Ioc;
 
 namespace XpChallenge.Exchange.Api
 {
@@ -12,8 +13,8 @@ namespace XpChallenge.Exchange.Api
         {
             services.AddControllersApiBehavior();
             services.AddSwaggerConfiguration();
-            //services.AddApplication();
-            //services.AddMongo(_configuration);
+            services.AddApplication();
+            services.AddMongo(_configuration);
         }
 
         public void Configure(IApplicationBuilder app)
