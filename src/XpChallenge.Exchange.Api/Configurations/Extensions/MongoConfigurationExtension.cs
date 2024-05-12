@@ -11,12 +11,12 @@ namespace XpChallenge.Exchange.Api.Configurations.Extensions
 
             if (mongoSettings != null && !string.IsNullOrEmpty(mongoSettings.ConnectionString))
             {
-                var connectionString = string.Format(mongoSettings.ConnectionString,
+                /* var connectionString = string.Format(mongoSettings.ConnectionString,
                     mongoSettings.User,
                     mongoSettings.Password,
-                    mongoSettings.DatabaseName);
+                    mongoSettings.DatabaseName); */
 
-                services.AddSingleton<IMongoClient>(_ => new MongoClient(connectionString));
+                services.AddSingleton<IMongoClient>(_ => new MongoClient(mongoSettings.ConnectionString));
                 services.AddScoped(serviceProvider =>
                 {
                     var mongoClient = serviceProvider.GetService<IMongoClient>();

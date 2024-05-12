@@ -12,10 +12,5 @@ namespace XpChallenge.Exchange.Application.Services
         {
             return _carteiraRepository.ObterPorIdClienteAsync(idCliente, cancellationToken);
         }
-
-        public async Task CriarOuAtualizarAsync(Carteira carteira, CancellationToken cancellationToken)
-        {
-            await _carteiraRepository.CriarOuAtualizarAsync(carteira, cancellationToken);
-        }
     }
 }

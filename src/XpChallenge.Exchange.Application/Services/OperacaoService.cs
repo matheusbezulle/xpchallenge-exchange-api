@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using XpChallenge.Exchange.Application.Services.Interfaces;
 using XpChallenge.Exchange.Domain.AggregateRoots;
 using XpChallenge.Exchange.Domain.ValueObjects;
@@ -25,7 +26,14 @@ namespace XpChallenge.Exchange.Application.Services
             session.StartTransaction();
             try
             {
-                await _carteiraRepository.CriarOuAtualizarAsync(carteira, cancellationToken);
+                if (carteira.Id == ObjectId.Empty)
+                {
+                    await _carteiraRepository.CriarAsync(carteira, cancellationToken);
+                }
+                else
+                {
+                    await _carteiraRepository.AtualizarAsync(carteira, cancellationToken);
+                }
                 await _operacaoRepository.CriarAsync(operacao, cancellationToken);
 
                 await session.CommitTransactionAsync(cancellationToken);

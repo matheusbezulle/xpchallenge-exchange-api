@@ -17,8 +17,4 @@
     <ProjectReference Include="..\XpChallenge.Exchange.Infra.Mongo\XpChallenge.Exchange.Infra.Mongo.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\VenderProdutoFinanceiro\" />
-  </ItemGroup>
-
 </Project>

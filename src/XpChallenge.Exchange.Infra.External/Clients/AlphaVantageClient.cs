@@ -19,7 +19,8 @@ namespace XpChallenge.Exchange.Infra.External.Clients
                 return 0;
             }
 
-            return Math.Round(decimal.Parse(response.CotacaoGlobal.CotacaoAtual), 2);
+            var valor = decimal.Parse(response.CotacaoGlobal.CotacaoAtual, System.Globalization.CultureInfo.InvariantCulture);
+            return Math.Round(valor, 2);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.PlatformAbstractions;
-using Microsoft.OpenApi.Any;
+﻿using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace XpChallenge.Exchange.Api.Configurations.Extensions
 {
@@ -10,10 +10,9 @@ namespace XpChallenge.Exchange.Api.Configurations.Extensions
         {
             services.AddSwaggerGen(c =>
             {
-                string path = PlatformServices.Default.Application.ApplicationBasePath;
-                string name = PlatformServices.Default.Application.ApplicationName;
-                string docPath = Path.Combine(path, $"{name}.xml");
-                c.IncludeXmlComments(docPath);
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
 
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {

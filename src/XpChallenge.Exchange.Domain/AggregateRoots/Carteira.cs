@@ -30,5 +30,10 @@ namespace XpChallenge.Exchange.Domain.AggregateRoots
         {
             return ProdutosFinanceiros.FirstOrDefault(p => p.Nome.Equals(nomeProdutoFinanceiro));
         }
+
+        public bool PossuiProdutosFinanceiros()
+        {
+            return ProdutosFinanceiros.Count > 0;
+        }
     }
 }
