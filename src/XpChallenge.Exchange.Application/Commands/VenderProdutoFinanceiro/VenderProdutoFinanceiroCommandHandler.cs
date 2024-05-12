@@ -43,7 +43,10 @@ namespace XpChallenge.Exchange.Application.Commands.VenderProdutoFinanceiro
                 return response;
             }
 
-            produtoFinanceiro.DiminuirQuantidade(request.Quantidade, cotacaoAtual.Value);
+            if (produtoFinanceiro.Quantidade == request.Quantidade)
+                carteira.RemoverProdutoFinanceiro(produtoFinanceiro);
+            else
+                produtoFinanceiro.DiminuirQuantidade(request.Quantidade, cotacaoAtual.Value);
 
             var operacao = new Operacao(request.IdCliente,
                 TipoOperacao.Venda,

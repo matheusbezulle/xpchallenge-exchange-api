@@ -10,25 +10,25 @@ namespace XpChallenge.Exchange.Domain.ValueObjects
         [BsonElement("Quantidade")]
         public int Quantidade { get; private set; } = quantidade;
 
-        [BsonElement("MediaValor")]
-        public decimal MediaValor { get; private set; } = valor;
+        [BsonElement("ValorMedia")]
+        public decimal ValorMedia { get; private set; } = valor;
 
         public void AdicionarQuantidade(int quantidade, decimal valor)
         {
-            decimal valorTotalAnterior = MediaValor * Quantidade;
+            decimal valorTotalAnterior = ValorMedia * Quantidade;
             decimal valorTotalNovo = valor * quantidade;
             Quantidade += quantidade;
-            MediaValor = (valorTotalAnterior + valorTotalNovo) / Quantidade;
+            ValorMedia = (valorTotalAnterior + valorTotalNovo) / Quantidade;
         }
 
         public void DiminuirQuantidade(int quantidade, decimal valor)
         {
             if (Quantidade >= quantidade)
             {
-                decimal valorTotalAnterior = MediaValor * Quantidade;
+                decimal valorTotalAnterior = ValorMedia * Quantidade;
                 decimal valorTotalReduzido = valor * quantidade;
                 Quantidade -= quantidade;
-                MediaValor = (valorTotalAnterior - valorTotalReduzido) / Quantidade;
+                ValorMedia = (valorTotalAnterior - valorTotalReduzido) / Quantidade;
             }
             else
             {

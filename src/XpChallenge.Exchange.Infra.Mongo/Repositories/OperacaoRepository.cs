@@ -21,7 +21,9 @@ namespace XpChallenge.Exchange.Infra.Mongo.Repositories
             var filter = Builders<Operacao>.Filter
                 .Eq(o => o.IdCliente, idCliente);
 
-            return await _operacaoCollection.Find(filter).ToListAsync(cancellationToken);
+            var sort = Builders<Operacao>.Sort.Descending("Data");
+
+            return await _operacaoCollection.Find(filter).Sort(sort).ToListAsync(cancellationToken);
         }
 
         public async Task CriarAsync(Carteira carteira, Operacao operacao, CancellationToken cancellationToken)

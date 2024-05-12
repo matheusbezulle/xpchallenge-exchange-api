@@ -26,6 +26,11 @@ namespace XpChallenge.Exchange.Domain.AggregateRoots
                 produtoFinanceiro.AdicionarQuantidade(quantidade, valor);
         }
 
+        public void RemoverProdutoFinanceiro(ProdutoFinanceiro produtoFinanceiro)
+        {
+            ProdutosFinanceiros.Remove(produtoFinanceiro);
+        }
+
         public ProdutoFinanceiro? ObterProdutoFinanceiro(string nomeProdutoFinanceiro)
         {
             return ProdutosFinanceiros.FirstOrDefault(p => p.Nome.Equals(nomeProdutoFinanceiro));

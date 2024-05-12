@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using XpChallenge.Exchange.Application.Notifications;
+using XpChallenge.Exchange.Application.Queries.ObterCarteira;
 using XpChallenge.Exchange.Application.Queries.ObterExtrato;
 
 namespace XpChallenge.Exchange.Api.Controllers
@@ -13,15 +14,28 @@ namespace XpChallenge.Exchange.Api.Controllers
         private readonly IMediator _mediator = mediator;
 
         /// <summary>
-        /// Método para obter o extrato de operações de determinado cliente
+        /// Obter o extrato de operações de determinado cliente
         /// </summary>
         /// <param name="idCliente"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet("{idCliente}/extrato")]
-        public async Task<IActionResult> ObterExtrato(Guid idCliente, CancellationToken cancellationToken = default)
+        public async Task<IActionResult> ObterExtratoAsync(Guid idCliente, CancellationToken cancellationToken = default)
         {
             var result = await _mediator.Send(new ObterExtratoQuery(idCliente), cancellationToken);
+            return ProcessarRetorno(result);
+        }
+
+        /// <summary>
+        /// Obter os dados da carteira de determinado cliente
+        /// </summary>
+        /// <param name="idCliente"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet("{idCliente}")]
+        public async Task<IActionResult> ObterAsync(Guid idCliente, CancellationToken cancellationToken = default)
+        {
+            var result = await _mediator.Send(new ObterCarteiraQuery(idCliente), cancellationToken);
             return ProcessarRetorno(result);
         }
     }

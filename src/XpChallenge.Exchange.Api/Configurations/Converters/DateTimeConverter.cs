@@ -8,12 +8,12 @@ namespace XpChallenge.Exchange.Api.Configurations.Converters
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            return DateTime.ParseExact(reader.GetString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(reader.GetString(), "dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
         }
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value.ToString("dd/MM/yyyy"));
+            writer.WriteStringValue(value.ToString("dd/MM/yyyy hh:mm:ss"));
         }
     }
 }
