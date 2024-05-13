@@ -17,7 +17,7 @@ namespace XpChallenge.Investimento.Api.Configurations.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
                     Title = "API de Transações",
-                    Description = "TODO"
+                    Description = "Este projeto é uma API .NET que permite um usuário comprar e vender produtos financeiros, além de consultar sua carteira de investimentos e o extrato de todas as operações realizadas."
                 });
 
                 c.MapType<int>(() => new OpenApiSchema() { Type = "integer", Default = new OpenApiInteger(0) });
