@@ -3,7 +3,6 @@ using XpChallenge.Investimento.Application.Commands.VenderProdutoFinanceiro;
 using XpChallenge.Investimento.Application.Notifications;
 using XpChallenge.Investimento.Application.Services.Interfaces;
 using XpChallenge.Investimento.Domain.AggregateRoots;
-using XpChallenge.Investimento.Domain.ValueObjects;
 
 namespace XpChallenge.Investimento.Tests.Handlers
 {
