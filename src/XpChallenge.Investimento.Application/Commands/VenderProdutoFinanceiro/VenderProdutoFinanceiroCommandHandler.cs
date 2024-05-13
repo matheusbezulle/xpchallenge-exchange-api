@@ -37,7 +37,7 @@ namespace XpChallenge.Investimento.Application.Commands.VenderProdutoFinanceiro
 
             var cotacaoAtual = await _produtoFinanceiroService.ObterCotacaoAtualAsync(request.NomeProdutoFinanceiro, cancellationToken);
 
-            if (!cotacaoAtual.HasValue)
+            if (cotacaoAtual == 0M || !cotacaoAtual.HasValue)
             {
                 _notificator.AdicionarErroNegocio("Não foi possível consultar a cotação do produto financeiro informado.");
                 return response;
