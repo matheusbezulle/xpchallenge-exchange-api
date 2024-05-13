@@ -68,6 +68,10 @@ Método responsável por enviar uma ordem de venda na carteira de determinado cl
 
 Para mais detalhes, consulte a documentação da API.
 
+### AlphaVantage
+
+Para consultar as cotações dos produtos financeiros está sendo usada a API aberta AlphaVantage.
+
 ## Evoluções
 
 - Autenticação: garantir a segurança no consumo da aplicação.
