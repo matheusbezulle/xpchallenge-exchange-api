@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{09D73FF9-82F3-4C36-84E0-CEB81B225328}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{5DDCAC86-A355-43CC-BEDB-668D8D2538A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{65A65944-A192-449B-9DF5-D60574D77CA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure", "04 - Infrastructure", "{D5B07D97-4EF0-4E06-B9A6-A3B3C53E1FA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Tests", "05 - Tests", "{BE738BFC-9082-4B79-8B97-6E3566C75EFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Api", "XpChallenge.Investimento.Api\XpChallenge.Investimento.Api.csproj", "{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Application", "XpChallenge.Investimento.Application\XpChallenge.Investimento.Application.csproj", "{CA349B37-B809-4E45-BDC3-AA7EE89E143F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Domain", "XpChallenge.Investimento.Domain\XpChallenge.Investimento.Domain.csproj", "{4F5D4BAA-B61C-4430-BA67-1DA850B9A391}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Infra.External", "XpChallenge.Investimento.Infra.External\XpChallenge.Investimento.Infra.External.csproj", "{8677FC56-38D2-48CF-BCB9-D58F72E0C900}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Infra.Mongo", "XpChallenge.Investimento.Infra.Mongo\XpChallenge.Investimento.Infra.Mongo.csproj", "{B4BC34D4-F8B1-4F62-A528-2CE909447542}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XpChallenge.Investimento.Tests", "..\tests\XpChallenge.Investimento.Tests\XpChallenge.Investimento.Tests.csproj", "{17536378-188C-4B87-A53A-51803853A37D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA349B37-B809-4E45-BDC3-AA7EE89E143F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA349B37-B809-4E45-BDC3-AA7EE89E143F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA349B37-B809-4E45-BDC3-AA7EE89E143F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA349B37-B809-4E45-BDC3-AA7EE89E143F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5D4BAA-B61C-4430-BA67-1DA850B9A391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5D4BAA-B61C-4430-BA67-1DA850B9A391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5D4BAA-B61C-4430-BA67-1DA850B9A391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5D4BAA-B61C-4430-BA67-1DA850B9A391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8677FC56-38D2-48CF-BCB9-D58F72E0C900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8677FC56-38D2-48CF-BCB9-D58F72E0C900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8677FC56-38D2-48CF-BCB9-D58F72E0C900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8677FC56-38D2-48CF-BCB9-D58F72E0C900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BC34D4-F8B1-4F62-A528-2CE909447542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BC34D4-F8B1-4F62-A528-2CE909447542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BC34D4-F8B1-4F62-A528-2CE909447542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BC34D4-F8B1-4F62-A528-2CE909447542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17536378-188C-4B87-A53A-51803853A37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17536378-188C-4B87-A53A-51803853A37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17536378-188C-4B87-A53A-51803853A37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17536378-188C-4B87-A53A-51803853A37D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{15F844DA-8D8F-4971-9E6B-953EF6BBEBF7} = {09D73FF9-82F3-4C36-84E0-CEB81B225328}
+		{CA349B37-B809-4E45-BDC3-AA7EE89E143F} = {5DDCAC86-A355-43CC-BEDB-668D8D2538A6}
+		{4F5D4BAA-B61C-4430-BA67-1DA850B9A391} = {65A65944-A192-449B-9DF5-D60574D77CA4}
+		{8677FC56-38D2-48CF-BCB9-D58F72E0C900} = {D5B07D97-4EF0-4E06-B9A6-A3B3C53E1FA6}
+		{B4BC34D4-F8B1-4F62-A528-2CE909447542} = {D5B07D97-4EF0-4E06-B9A6-A3B3C53E1FA6}
+		{17536378-188C-4B87-A53A-51803853A37D} = {BE738BFC-9082-4B79-8B97-6E3566C75EFF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E271D99-11D2-4FCE-A3C5-8372AA1D5BCA}
+	EndGlobalSection
+EndGlobal
