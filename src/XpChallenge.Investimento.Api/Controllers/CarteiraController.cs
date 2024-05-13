@@ -19,7 +19,7 @@ namespace XpChallenge.Investimento.Api.Controllers
         /// <param name="idCliente"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        [HttpGet("{idCliente}/extrato")]
+        [HttpGet("{idCliente}/Extrato")]
         public async Task<IActionResult> ObterExtratoAsync(Guid idCliente, CancellationToken cancellationToken = default)
         {
             var result = await _mediator.Send(new ObterExtratoQuery(idCliente), cancellationToken);

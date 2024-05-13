@@ -22,7 +22,7 @@ namespace XpChallenge.Investimento.Application.Commands.ComprarProdutoFinanceiro
 
             var cotacaoAtual = await _produtoFinanceiroService.ObterCotacaoAtualAsync(request.NomeProdutoFinanceiro, cancellationToken);
             
-            if (!cotacaoAtual.HasValue)
+            if (cotacaoAtual == 0M || !cotacaoAtual.HasValue)
             {
                 _notificator.AdicionarErroNegocio("Não foi possível encontrar produto financeiro informado.");
                 return response;
