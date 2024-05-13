@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XpChallenge.Investimento.Domain\XpChallenge.Investimento.Domain.csproj" />
+    <ProjectReference Include="..\XpChallenge.Investimento.Infra.External\XpChallenge.Investimento.Infra.External.csproj" />
+    <ProjectReference Include="..\XpChallenge.Investimento.Infra.Mongo\XpChallenge.Investimento.Infra.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>
