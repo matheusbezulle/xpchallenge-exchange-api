@@ -26,9 +26,9 @@ Caso queira acessar o mongodb, ele sobe por padrão na porta 27017. É possível
 
 ## Como utilizar a aplicação
 
-Aqui estão alguns exemplos de como você pode interagir com a API:
+É possível consultar a documentação da API e realizar chamadas através do swagger. Segue a documentação mais detalhada dos objetos de request nos diversos endpoints:
 
-### 🔵 GET Carteira/{idCliente}/Extrato
+#### 🔵 GET /Carteira/{idCliente}/Extrato
 
 Método responsável por obter o extrato de operações de determinado cliente.
 
@@ -36,7 +36,7 @@ Método responsável por obter o extrato de operações de determinado cliente.
 
 - `idCliente` (Guid): Identificador único do cliente. Este campo é obrigatório.
 
-### 🔵 GET Carteira/{idCliente}
+#### 🔵 GET /Carteira/{idCliente}
 
 Método responsável por obter os dados da carteira de determinado cliente.
 
@@ -46,32 +46,37 @@ Método responsável por obter os dados da carteira de determinado cliente.
 
 ---
 
-### 🟢 POST Exchange/Comprar
+#### 🟢 POST /Exchange/Comprar
 
 Método responsável por enviar uma ordem de compra na carteira de determinado cliente.
 
 **Parâmetros do corpo da solicitação**:
 
 - `IdCliente` (Guid): Identificador único do cliente. Este campo é obrigatório.
-- `NomeProdutoFinanceiro` (string): Nome do produto financeiro a ser comprado. Este campo é obrigatório.
+- `NomeProdutoFinanceiro` (string): Nome do produto financeiro a ser comprado. Este campo é obrigatório. Exemplo: PETR4.
 - `Quantidade` (int): Quantidade do produto financeiro a ser comprado. Este campo é obrigatório e deve ser maior que 0.
 
-### 🟢 POST Exchange/Vender
+#### 🟢 POST /Exchange/Vender
 
 Método responsável por enviar uma ordem de venda na carteira de determinado cliente.
 
 **Parâmetros do corpo da solicitação**:
 
 - `IdCliente` (Guid): Identificador único do cliente. Este campo é obrigatório.
-- `NomeProdutoFinanceiro` (string): Nome do produto financeiro a ser vendido. Este campo é obrigatório.
+- `NomeProdutoFinanceiro` (string): Nome do produto financeiro a ser vendido. Este campo é obrigatório. Exemplo: PETR4.
 - `Quantidade` (int): Quantidade do produto financeiro a ser vendido. Este campo é obrigatório e deve ser maior que 0.
 
 Para mais detalhes, consulte a documentação da API.
 
-## Arquitetura
-
-Se você deseja contribuir para este projeto, por favor ...
-
 ## Evoluções
 
-Este projeto está licenciado sob a licença ...
+- Autenticação: garantir a segurança no consumo da aplicação.
+- Ambientação: criar ambientes de dev, hlg e prd.
+- Esteira CI/CD: realizar o deploy contínuo em uma esteira automatizada.
+- Cloud: algum gerenciador de containers, como AKS.
+- Observabilidade: aprimorar logs, métricas e traces.
+- Monitoria: ferramentas para monitorar aplicação, como Grafana.
+
+## Contribuição
+
+Matheus Bezulle dos Anjos, (11) 97067-4857
